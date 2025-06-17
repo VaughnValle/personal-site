@@ -1,72 +1,42 @@
-# Gyoza
+![Spectre, a terminal-inspired theme for Astro.](./images/README.png)
 
-Gyoza is a static blog template built with Astro and React.
+Spectre is a terminal-inspired theme for Astro, built using TypeScript and Astro.
 
-![astro version](https://img.shields.io/badge/astro-4.6-red)
-![node version](https://img.shields.io/badge/node-18.18-green)
+## Getting Started
 
-Demo Site:
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/louisescher/spectre/tree/main)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/louisescher/spectre/tree/main)
 
-- [gyoza.lxchapu.com](https://gyoza.lxchapu.com)
-- [www.lxchapu.com](https://www.lxchapu.com)
+Alternatively, you can create a new Astro project with Spectre like this:
 
-Enjoy it!
+```bash
+# npm
+npm create astro@latest -- --template louisescher/spectre
 
-## 📷 Screenshots
+# pnpm
+pnpm create astro@latest --template louisescher/spectre
 
-![Preview](https://s2.loli.net/2024/05/06/A9rzC3Uym7RwdQc.webp)
-
-## 🎉 Features
-
-- ✅ 有着规范的 URL 和 OpenGraph 信息，对 SEO 友好
-- ✅ 支持站点地图
-- ✅ 支持 RSS 订阅
-- ✅ 支持夜间模式
-- ✅ 特殊日期变灰
-- ✅ 简单干净的配色和主题
-- ✅ 支持评论系统
-- ✅ 支持代码高亮
-
-## 🔧 Tech Stack
-
-- [Astro](https://astro.build/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Jotai](https://jotai.org/)
-
-## 📖 Documentation
-
-前往：[Documentation](https://gyoza.lxchapu.com/posts/guide)
-
-## 🚀 Project Structure
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   ├── pages/
-│   ├── plugins/
-│   ├── store/
-│   ├── styles/
-│   ├── utils/
-│   └── config.json
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+# yarn
+yarn create astro --template louisescher/spectre
 ```
 
-网站配置保存在 `config.json` 文件。
+## Features
 
-## 🧞 Commands
+- 100 / 100 Lighthouse performance
+- Responsive for all screen sizes
+- Fully accessible
+- Type-Safe
+- Auto-generated sitemap
+- Markdown / MDX Support
+- Builds on content collections
+- Search powered by [pagefind](https://pagefind.app)
+- Comments powered by [giscus](https://giscus.app) (can be turned off)
+- More!
 
-| Command        | Action                                       |
-| :------------- | :------------------------------------------- |
-| `pnpm i`       | Installs dependencies                        |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm build`   | Build your production site to `./dist/`      |
-| `pnpm preview` | Preview your build locally, before deploying |
-| `pnpm format`  | Format code using Prettier                   |
+## Curious?
+
+Head over to [the preview page](https://spectre.louisescher.dev) to find out more!
+
+### Spectre Integration
+
+If you want to know more about how the custom integration that is used in the `astro.config.ts` file works, head over to the [integration's own README](https://github.com/louisescher/spectre/tree/master/package)!
