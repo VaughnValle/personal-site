@@ -50,7 +50,7 @@ const config = defineConfig({
           title: 'Projects'
         }
       },
-      
+      /*
       giscus: {
         // These are correctly using the variables now
         repository: GISCUS_REPO,
@@ -66,6 +66,7 @@ const config = defineConfig({
         theme: GISCUS_THEME,
         loading: GISCUS_LAZY === "true",
       }
+      */
       
     })
   ],
