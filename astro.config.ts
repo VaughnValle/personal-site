@@ -18,7 +18,10 @@ const {
   GISCUS_STRICT,
   GISCUS_REACTIONS_ENABLED,
   GISCUS_EMIT_METADATA,
-  GISCUS_LANG
+  GISCUS_LANG,
+  GISCUS_POSITION,
+  GISCUS_THEME,
+  GISCUS_LAZY
 } = loadEnv(process.env.NODE_ENV!, process.cwd(), "");
 
 // https://astro.build/config
@@ -46,7 +49,7 @@ const config = defineConfig({
           title: 'Projects'
         }
       },
-      /*
+      
       giscus: {
         repository: GISCUS_REPO,
         repositoryId: GISCUS_REPO_ID,
@@ -57,8 +60,11 @@ const config = defineConfig({
         reactionsEnabled: GISCUS_REACTIONS_ENABLED === "true",
         emitMetadata: GISCUS_EMIT_METADATA === "true",
         lang: GISCUS_LANG,
+	commentsInput: GISCUS_POSITION,
+	theme: GISCUS_THEME,
+	loading: GISCUS_LAZY === "true",
       }
-      */
+      
     })
   ],
   adapter: node({
