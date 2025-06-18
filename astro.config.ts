@@ -26,7 +26,7 @@ const {
 
 // https://astro.build/config
 const config = defineConfig({
-  site: 'https://spectre.louisescher.dev',
+  site: 'https://vallev.me',
   output: 'static',
   integrations: [
     expressiveCode({
@@ -35,15 +35,15 @@ const config = defineConfig({
     mdx(),
     sitemap(),
     spectre({
-      name: 'Spectre',
+      name: 'Vaughn Valle',
       openGraph: {
         home: {
-          title: 'Spectre',
-          description: 'A minimalistic theme for Astro.'
+          title: 'Vaughn Valle',
+          description: 'Vaughn\'s personal website'
         },
         blog: {
           title: 'Blog',
-          description: 'News and guides for Spectre.'
+          description: 'Let\'s talk about fun things!'
         },
         projects: {
           title: 'Projects'
