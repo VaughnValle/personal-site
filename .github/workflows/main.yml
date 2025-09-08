@@ -1,0 +1,24 @@
+# GitHub Action to automatically sync the fork with the upstream repository
+
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 * * * *' # This runs the action every hour
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # We need a personal access token with repo permissions to push to the fork
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync fork repository
+        uses: tgymnich/fork-sync@v1.2
+        with:
+          owner: louisescher
+          head: main # Or master, depending on the default branch name
+          base: main # Or master
