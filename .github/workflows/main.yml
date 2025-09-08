@@ -11,14 +11,18 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # This first step checks out your repository so the workflow can access it
       - uses: actions/checkout@v4
         with:
-          # We need a personal access token with repo permissions to push to the fork
+          # We need a token with repo permissions to push to the fork
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # This is the step that performs the sync
       - name: Sync fork repository
         uses: tgymnich/fork-sync@v1.2
         with:
+          # This is the line that was missing
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: louisescher
-          head: main # Or master, depending on the default branch name
-          base: main # Or master
+          head: main # Or master, depending on the default branch name in the original repo
+          base: main # Or master, depending on the default branch name in your fork
