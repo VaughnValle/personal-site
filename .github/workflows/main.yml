@@ -24,5 +24,5 @@ jobs:
           # This is the line that was missing
           github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: louisescher
-          head: main # Or master, depending on the default branch name in the original repo
+          head: master # Or master, depending on the default branch name in the original repo
           base: main # Or master, depending on the default branch name in your fork
